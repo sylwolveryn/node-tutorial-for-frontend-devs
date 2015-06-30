@@ -1,5 +1,12 @@
-extends layout
-
+//extends layout
 block content
-    h1= title
-    p Welcome to #{title}
+	link(rel='stylesheet', href='/stylesheets/questions-answers.css')
+	h1= title
+	form#formQuestion(name="question", method="post", action="/answer")
+		input#inputAnswerA(type="button", value="notYetDeclaredVariable === \"undefined\" ", name="answer-a")
+		input#inputAnswerB(type="button", value="undefined === typeof undefined", name="answer-b")
+		input#inputAnswerC(type="button", value="typeof notYetDeclaredVariable === undefined", name="answer-c")
+		input#inputAnswerD(type="button", value="typeof notYetDeclaredVariable === \"undefined\"", name="answer-d")
+		div.questionWrapper
+			p.question Which one will return true?
+			button#btnSubmit(type="submit") submit

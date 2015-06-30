@@ -3,7 +3,7 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-    res.render('index', { title: 'Express' });
+    res.render('index', { title: '' });
 });
 
 /* GET Hello World page. */
@@ -28,20 +28,22 @@ router.get('/newuser', function(req, res) {
 });
 
 /* POST to Add User Service */
-router.post('/adduser', function(req, res) {
+router.post('/answer', function(req, res) {
 
     // Set our internal DB variable
     var db = req.db;
 
     // Get our form values. These rely on the "name" attributes
-    var userName = req.body.username;
-    var userEmail = req.body.useremail;
+    var answerA = req.body.answer-a;
+    var answerB = req.body.answer-b;
+    var answerC = req.body.answer-c;
+    var answerD = req.body.answer-d;
 
     // Set our collection
-    var collection = db.get('usercollection');
+    var answers = db.get('answers');
 
     // Submit to the DB
-    collection.insert({
+    answers.insert({
         "username" : userName,
         "email" : userEmail
     }, function (err, doc) {

@@ -1,0 +1,5 @@
+cd mongo_data
+mongod --dbpath .
+
+in root
+npm start

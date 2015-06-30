@@ -1,0 +1,14 @@
+input {
+	width: 50%;
+	height: 50%;
+}
+
+.questionWrapper {
+	position: absolute;
+	z-index: 1;
+	top: 43%;
+	left: 32%;
+	text-align: center;
+	background-color: navy;
+	color: white;
+}
