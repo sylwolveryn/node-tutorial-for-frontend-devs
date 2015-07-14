@@ -1,3 +1,7 @@
+install:
+npm install
+
+start:
 cd mongo_data
 mongod --dbpath .
 
