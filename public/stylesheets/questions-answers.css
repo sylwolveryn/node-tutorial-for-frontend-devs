@@ -6,9 +6,19 @@ input {
 .questionWrapper {
 	position: absolute;
 	z-index: 1;
-	top: 43%;
-	left: 32%;
+	top: 50%;
+	left: 50%;
 	text-align: center;
-	background-color: navy;
+	background-color: rgba(12, 12, 72, 0.46);
 	color: white;
+	border-radius: 7px;
+	width: 300px;
+	height: 120px;
+	margin-left: -150px;
+	margin-top: -60px;
+}
+
+.submit {
+	background-color: rgb(6, 255, 6);
+	border-radius: 4px;
 }
